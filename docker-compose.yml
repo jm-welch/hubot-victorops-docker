@@ -1,0 +1,34 @@
+version: '2'
+services:
+  hubot-victorops:
+    build: .
+    image: hubot-victorops:latest
+    container_name: hubot
+    ports:
+      - 8080
+    restart: always
+    tty: true
+    environment:
+      # Hubot settings
+      HUBOT_ADAPTER: victorops
+      HUBOT_LOG_LEVEL: info
+      HUBOT_NAME: hubot
+      HUBOT_ANNOUNCE: Hubot, reporting for duty!
+
+      # VictorOps Environment
+      HUBOT_VICTOROPS_URL: wss://chat.victorops.com/chat
+
+      # VictorOps Hubot Integration Settings
+      HUBOT_VICTOROPS_KEY: ########-####-####-####-############
+
+      # VictorOps API ID and Key
+      #HUBOT_VICTOROPS_API_ID: ########
+      #HUBOT_VICTOROPS_API_KEY: ###############################
+
+      # VictorOps REST API Integration
+      #HUBOT_VICTOROPS_REST_API_KEY: ########-####-####-####-############
+
+      # API keys for miscellaneous hubot commands
+      #HUBOT_GOOGLE_CSE_ID: 
+      #HUBOT_GOOGLE_CSE_KEY: 
+      #HUBOT_YOUTUBE_API_KEY: 
