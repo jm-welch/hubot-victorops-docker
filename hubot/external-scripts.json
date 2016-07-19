@@ -1,8 +1,11 @@
 [
   "hubot-diagnostics",
   "hubot-help",
+  "hubot-google-images",
+  "hubot-google-translate",
+  "hubot-maps",
   "hubot-redis-brain",
-  "hubot-reload-scripts",
   "hubot-rules",
-  "hubot-auth"
+  "hubot-shipit",
+  "hubot-youtube"
 ]
